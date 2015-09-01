@@ -49,10 +49,15 @@ class Kv2Skeleton
 	map<JointType, Kv2Joint> joints;
 };
 
-class ofxKinectCommonBridge : protected ofThread {
+class ofxKinectCommonBridge : public ofThread {
   public:
 	
 	ofxKinectCommonBridge();
+
+	ofxKinectCommonBridge::~ofxKinectCommonBridge()
+	{
+		stop();
+	};
 
 	// new API
 	bool initSensor( int id = 0 );

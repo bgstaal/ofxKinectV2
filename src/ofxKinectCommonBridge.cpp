@@ -68,6 +68,7 @@ ofxKinectCommonBridge::ofxKinectCommonBridge(){
 
 }
 
+
 //---------------------------------------------------------------------------
 void ofxKinectCommonBridge::setDepthClipping(float nearClip, float farClip){
 	nearClipping = nearClip;
